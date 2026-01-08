@@ -9,12 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Say Hello
         run: echo "Hello, CI/CD!"
-      - name: Run simple test
+
+      - name: Run failing test
         run: |
-          echo "1 + 1 = $((1 + 1))"
-          if [ $((1 + 1)) -ne 2 ]; then
+          echo "2 + 2 = $((2 + 2))"
+          if [ $((2 + 2)) -ne 5 ]; then
+            echo "Test failed!"
             exit 1
           fi
-
