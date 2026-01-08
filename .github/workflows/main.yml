@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Say Hello
-        run: echo "Hello, CI/CD!"
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-      - name: Run Anothet Passed test
-        run: |
-          echo "2 + 2 = $((2 + 2))"
-          if [ $((2 + 2)) -ne 4 ]; then
-            echo "Test Passed!"
-            exit 1
-          fi
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
