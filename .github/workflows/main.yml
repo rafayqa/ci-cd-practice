@@ -1,0 +1,22 @@
+name: CI Practice
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Say Hello
+        run: echo "Hello, CI/CD!"
+
+      - name: Run Anothet Passed test
+        run: |
+          echo "2 + 2 = $((2 + 2))"
+          if [ $((2 + 2)) -ne 4 ]; then
+            echo "Test Passed!"
+            exit 1
+          fi
