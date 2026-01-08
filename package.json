@@ -4,7 +4,7 @@
   "description": "Let's get hand dirty with CI/CD",
   "main": "form.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/rafayqa/ci-cd-practice/issues"
   },
-  "homepage": "https://github.com/rafayqa/ci-cd-practice#readme"
+  "homepage": "https://github.com/rafayqa/ci-cd-practice#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
