@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/rafayqa/ci-cd-practice#readme",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7"
   }
 }
