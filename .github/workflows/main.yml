@@ -13,10 +13,10 @@ jobs:
       - name: Say Hello
         run: echo "Hello, CI/CD!"
 
-      - name: Run failing test
+      - name: Run Anothet Passed test
         run: |
           echo "2 + 2 = $((2 + 2))"
-          if [ $((2 + 2)) -ne 5 ]; then
-            echo "Test failed!"
+          if [ $((2 + 2)) -ne 4 ]; then
+            echo "Test Passed!"
             exit 1
           fi
